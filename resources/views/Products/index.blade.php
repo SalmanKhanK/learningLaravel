@@ -7,13 +7,6 @@
 </head>
 <body>
     <h1>Prodcuts</h1>
-    {{-- <p>{{ $title }}</p>
-    <p>{{ $description }}</p> --}}
-
-    {{-- @foreach ($data as $item )
-        <p>{{ $item }}</p>
-    @endforeach --}}
-
- <p>{{ $data }}</p>
+    <a href={{ route('products') }}>Products</a>
 </body>
 </html>

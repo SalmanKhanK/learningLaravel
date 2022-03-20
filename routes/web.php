@@ -17,20 +17,4 @@ use App\Http\Controllers\Productcontroller;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/products',[Productcontroller::class,'index']);
-// Route::get('/products/{name}',[Productcontroller::class,'show']);
-//Route::get('/products/{name}',[Productcontroller::class,'show'])->where('name','[a-zA-Z]+');
-Route::get('/products/{name}/{id}',[Productcontroller::class,'show'])->where(
-    [
-        'name' => '[a-zA-Z]+',
-        'id' => '[0-9]+'
-    ]);
-// Route::get('/users', function () {
-//     return response()->json([
-//         'name' => 'salman',
-//         'rollNum' => '123EP'
-//     ]);
-// });
-// Route::get('/user', function () {
-//     return redirect('/');
-// });
+Route::get('/products',[Productcontroller::class,'index'])->name('products');
